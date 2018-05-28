@@ -11,15 +11,15 @@ dictionary = {
 }
 
 movies = {
-  :moulin_rouge =>1995,
-  :romeo_juliet =>1996,
-  :titanic =>1997
+  :moulin_rouge => 1995,
+  :romeo_juliet => 1996,
+  :titanic => 1997
 }
 
 cities = {
-  :new_york =>1000000,
-  :toronto =>500000,
-  :paris =>3000000
+  :new_york => 1000000,
+  :toronto => 500000,
+  :paris => 3000000
 }
 
 siblings = {
@@ -29,11 +29,16 @@ siblings = {
 }
 
 # exercise 1
-p coin
-p colours[0]
-p ages.sort
+# p coin
+# p colours[0]
+# p ages.sort
+#
+# ages << 0
+#   p ages
+#
+# p movies.first[1]
 
-ages << 0
-  p ages
-
-p movies.first[1]
+# exercise 2
+p colours.last
+cities[:tokyo] = 80000000
+p cities
