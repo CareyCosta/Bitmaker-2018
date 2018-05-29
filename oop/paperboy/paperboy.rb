@@ -22,18 +22,19 @@ class Paperboy
 
   def quota
     min = 50
-    q = (@experience % 2) + min
-    p "your quota is #{q}"
+    puts "your quota is #{50 + (@experience % 2)}"
   end
 
   def deliver(start_address, end_address)
-    houses = (end_address - start_address)
-      puts "you have #{houses} houses to deiver to"
-    @earnings = houses * 0.25
-    if houses > 50
-      @earnings = (houses - 50) * 0.50
+    # num of houses delviered to is experience
+    @experience = (end_address - start_address)
+      puts "you have #{@experience} houses to deiver to"
+    if @experience <= 50
+      @earnings = @experience * 0.25
+    elsif @experience > 50
+      @earnings = (@experience - 50) * (0.50 + )
     end
-    puts "did you complete this deliver?"
+    puts "did you complete this delivery?"
       answer = gets.chomp
         if answer == "yes"
           puts "you have earned $#{@earnings}"
@@ -44,5 +45,6 @@ end
 
 boy1 = Paperboy.new('kevin')
 boy1.quota
-boy1.deliver(20, 50)
+boy1.deliver(20, 100)
 boy1.earnings
+boy1.quota
